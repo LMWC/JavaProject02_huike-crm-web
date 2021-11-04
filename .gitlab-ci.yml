@@ -39,4 +39,4 @@ deploy-staging:dep:
   - echo "=====end build======"
   - echo "=====start deploy======"
   - sudo cp -rf ./dist/  /usr/share/nginx/html/crm
-  - echo "=====end deploy!!!!!!======"
+  - echo "=====end deploy======"
