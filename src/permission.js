@@ -24,14 +24,29 @@ router.beforeEach((to, from, next) => {
             if(accessRoutes && accessRoutes.length > 1){
               // 根据roles权限生成可访问的路由表
               router.addRoutes(accessRoutes) // 动态添加可访问路由表
+              let flag = false
+              if(accessRoutes && accessRoutes.length>0){
+                for(let i=0;i<accessRoutes.length;i++){
+                  if(accessRoutes[i] && accessRoutes[i]?.children?.length>0){
+                    for(let j=0;j<accessRoutes[i].children.length;j++){
+                      console.log('accessRoutes[i].children[j].path',accessRoutes[i].children[j].path)
+                      console.log('accessRoutes[i].children[j].path',accessRoutes[i].children[j].name)
+                      if('/'+accessRoutes[i].children[j].path===to.path){
+                        flag = true
+                        break
+                      }
+                    }
+                  }
+                }
+              }
               // 获取第一个动态路由为默认跳转
-              next({ ...to, path: accessRoutes[0].children[0].path, replace: true }) // hack方法 确保addRoutes已完成
+              next({ ...to, path: flag?to.path:accessRoutes[0].children[0].path, replace: true }) // hack方法 确保addRoutes已完成
             }else{
               store.dispatch('LogOut').then(() => {
                 MessageBox.alert('您的用户暂无权限，请联系平台管理员！','提示', {
                   confirmButtonText: '确定',
                   callback: action => {
-                    window.location.href='/login'
+                    next({ path: '/login' })
                   }
                 })
               })
@@ -40,7 +55,7 @@ router.beforeEach((to, from, next) => {
         }).catch(err => {
             store.dispatch('LogOut').then(() => {
               Message.error(err)
-              next({ path: '/' })
+              next({ path: '/login' })
             })
           })
       } else {
@@ -53,7 +68,7 @@ router.beforeEach((to, from, next) => {
       // 在免登录白名单，直接进入
       next()
     } else {
-      next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
+      next({ path: '/login' }) // 否则全部重定向到登录页
       NProgress.done()
     }
   }

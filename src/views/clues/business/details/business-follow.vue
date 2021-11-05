@@ -575,6 +575,7 @@ export default {
       if (course) {
         this.interestAmount = course.price
       } else {
+        this.form.courseId = null
         this.interestAmount = 0
       }
     },

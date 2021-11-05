@@ -32,11 +32,12 @@ export default {
     getBreadcrumb () {
       // only show routes with meta.title
       let matched = this.$route.matched.filter(item => item.meta && item.meta.title && item.path)
-      const first = matched[0]
-      const index = matched.findIndex(item => item.path === '/path')
-      if (!this.isDashboard(first) && index < 0) {
+      // const first = matched[0]
+      // const index = matched.findIndex(item => item.path === '/path')
+      if (matched[0].path !== '/index') {
         matched = [{ path: '/index', meta: { title: '首页' } }].concat(matched)
       }
+      console.log('-==-getBreadcrumb-=matched1-=', matched)
 
       this.levelList = matched.filter(item => item.meta && item.meta.title && item.meta.breadcrumb !== false)
     },

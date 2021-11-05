@@ -26,7 +26,7 @@
                 </div>
                 <div class="info-list mt0">
                   <span class="label">购买课程</span>
-                  <span class="des">{{ courseName }}</span>
+                  <span class="des">{{ dataForm.courseName }}</span>
                 </div>
                 <div class="info-list mt0">
                   <span class="label">购买金额</span>
@@ -46,8 +46,11 @@
                 </div>
               </div>
             </div>
+            <div class="search-btn">
+              <el-button class="cus-reset-btn" @click="goPage()">返回</el-button>
+            </div>
           </div>
-          <div class="l-top-box">
+          <div v-if="false" class="l-top-box">
             <div class="title-box">
               <span class="title-label">审核流程</span>
             </div>
@@ -463,7 +466,8 @@ export default {
     bottom: 0;
   }
   .search-btn{
-    padding: 100px 0;
+    // padding: 100px 0;
+    padding: 20px 0;
     text-align: right;
   }
   .finish-step{

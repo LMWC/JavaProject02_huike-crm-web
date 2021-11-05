@@ -64,7 +64,7 @@
       </el-form-item>
     </el-form>
 
-    <div class="tabs-list-box">
+    <!-- <div class="tabs-list-box">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane
           :label="'全部('+totalCount.total+')'"
@@ -83,7 +83,7 @@
           name="3"
         />
       </el-tabs>
-    </div>
+    </div> -->
 
     <div class="cus-btn-box">
       <!-- <div class="label">
@@ -124,20 +124,20 @@
                 type="text"
                 @click="previewHandle(scope.row.fileName)"
               >预览</el-button>
-              <el-button
+              <!-- <el-button
                 v-if="scope.row.status==3"
                 v-hasPermi="['contract:contract:edit']"
                 size="mini"
                 type="text"
                 @click="addOrUpdateHandle(scope.row.id)"
-              >修改</el-button>
-              <el-button
+              >修改</el-button> -->
+              <!-- <el-button
                 v-if="scope.row.status==1"
                 v-hasPermi="['contract:contract:audit']"
                 size="mini"
                 type="text"
                 @click="infoHandle(scope.row.id,'audit')"
-              >审核</el-button>
+              >审核</el-button> -->
               <el-button
                 v-hasPermi="['contract:contract:info']"
                 size="mini"

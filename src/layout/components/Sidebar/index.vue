@@ -39,8 +39,8 @@ export default {
     activeMenu () {
       const route = this.$route
       const { meta, path } = route
-      console.log('meta', meta)
-      console.log('path', path)
+      console.log('meta--------', meta)
+      console.log('path---------', path)
       // if set path, the sidebar will highlight the path you set
       if (meta.activeMenu) {
         return meta.activeMenu
