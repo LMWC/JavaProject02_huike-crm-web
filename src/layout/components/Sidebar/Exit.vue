@@ -3,7 +3,7 @@
     <transition name="exitFade">
       <div class="exit-con">
         <div class="user-avatar-box" @click="goNotice">
-          <el-badge :value="$store.state.user.value" :max="100" class="item">
+          <el-badge :value="$store.state.user.value" :max="100" class="item" :hidden="$store.state.user.value<=0">
             <img :src="avatar" class="user-avatar">
           </el-badge>
         </div>
