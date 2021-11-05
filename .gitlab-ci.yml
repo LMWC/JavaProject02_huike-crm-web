@@ -38,5 +38,5 @@ deploy-staging:dep:
   - npm run build  # 将项目打包
   - echo "=====end build======"
   - echo "=====start deploy======"
-  - sudo cp -rf ./dist  /usr/share/nginx/html/crm
+  - sudo cp -rf ./dist/  /usr/share/nginx/html/crm/
   - echo "=====end deploy======"
