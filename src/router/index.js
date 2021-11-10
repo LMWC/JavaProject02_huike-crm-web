@@ -3,6 +3,21 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+// 获取原型对象上的push函数
+const originalPush = Router.prototype.push
+// 修改原型对象中的push方法
+Router.prototype.push = function push (location, onResolve, onReject) {
+  if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
+  return originalPush.call(this, location).catch(err => err)
+}
+
+// 获取原型对象上的replace函数
+const originalReplace = Router.prototype.replace
+Router.prototype.replace = function replace (location, onResolve, onReject) {
+  if (onResolve || onReject) return originalReplace.call(this, location, onResolve, onReject)
+  return originalReplace.call(this, location).catch(err => err)
+}
+
 /* Layout */
 import Layout from '@/layout'
 import ParentView from '@/components/ParentView';
