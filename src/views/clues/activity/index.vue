@@ -19,7 +19,7 @@
           />
         </el-select>
       </el-form-item>
-      <!-- <el-form-item label="活动状态" prop="status">
+      <el-form-item label="活动状态" prop="status">
         <el-select v-model="queryParams.status" placeholder="请选择活动状态" clearable>
           <el-option
             v-for="dict in statusOptions"
@@ -28,7 +28,7 @@
             :value="dict.dictValue"
           />
         </el-select>
-      </el-form-item> -->
+      </el-form-item>
       <el-form-item label="创建时间">
         <el-date-picker
           v-model="createTime"
@@ -75,7 +75,7 @@
           placeholder="请选择结束时间"
         />
       </el-form-item> -->
-      <el-form-item class="search-btn wp-100">
+      <el-form-item class="search-btn wp-75">
         <el-button class="cus-search-btn" type="primary" @click="searchHandle">搜索</el-button>
         <el-button class="cus-reset-btn" @click="resetQuery">重置</el-button>
       </el-form-item>
@@ -148,7 +148,7 @@
               <span>{{ parseTime(scope.row.endTime, '{y}-{m}-{d} {h}:{i}') }}</span>
             </template>
           </el-table-column>
-          <!-- <el-table-column
+          <el-table-column
             v-if="activeName=='tabs1'"
             key="status"
             label="状态"
@@ -161,8 +161,8 @@
             :filter-method="filterStatus"
             column-key="status"
             filter-placement="bottom-end"
-          /> -->
-          <!-- <el-table-column
+          />
+          <el-table-column
             v-if="activeName!='tabs1'"
             key="status1"
             label="状态"
@@ -170,23 +170,25 @@
             align="center"
             prop="status"
             :formatter="statusFormat"
-          /> -->
-          <el-table-column fixed="right" label="操作" align="center" class-name="small-padding fixed-width" min-width="120">
+          />
+          <el-table-column v-if="activeName!=2 && activeName!=4" fixed="right" label="操作" align="center" class-name="small-padding fixed-width" min-width="120">
             <template slot-scope="scope">
               <el-button
+                v-if="scope.row.status==3"
                 v-hasPermi="['clues:activity:edit']"
                 size="mini"
                 type="text"
                 @click="addOrUpdateHandle(scope.row.id)"
               >修改</el-button>
               <el-button
+                v-if="scope.row.status==3"
                 v-hasPermi="['clues:activity:remove']"
                 class="del-text"
                 size="mini"
                 type="text"
                 @click="handleDelete(scope.row.id)"
               >删除</el-button>
-              <!-- <el-button
+              <el-button
                 v-if="scope.row.status==1"
                 v-hasPermi="['clues:activity:pass']"
                 size="mini"
@@ -200,7 +202,7 @@
                 size="mini"
                 type="text"
                 @click="rejectHandle(scope.row.id)"
-              >驳回</el-button> -->
+              >驳回</el-button>
             </template>
           </el-table-column>
         </el-table>
