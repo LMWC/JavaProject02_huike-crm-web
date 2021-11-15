@@ -104,6 +104,7 @@ service.interceptors.response.use(res => {
 )
 
 export const createService= (config) => {
+  // console.log('-=-config=--',config)
   if(process.env.VUE_APP_DELETE_PERMISSIONS==='false'){
     if (config.method==='delete' || config.method === 'put') {
       // 判断put和delete是否不可进行操作

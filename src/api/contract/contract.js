@@ -71,7 +71,7 @@ export function passContract(id) {
 // 合同审核驳回
 export function rejectContract(data) {
   return request({
-    url: `contract/reject`,
+    url: `/contract/reject`,
     method: 'put',
     data
   })
@@ -80,7 +80,7 @@ export function rejectContract(data) {
 // 商机转合同
 export function changeContract(id, data) {
   return request({
-    url: `contract/changeContract/${id}`,
+    url: `/contract/changeContract/${id}`,
     method: 'put',
     data
   })

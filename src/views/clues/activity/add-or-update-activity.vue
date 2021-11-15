@@ -154,6 +154,7 @@ export default {
       this.getDicList()
       this.$nextTick(() => {
         this.$refs.form.resetFields()
+        this.form.status = null
         console.log('this.form.activityTime', this.form.activityTime)
         if (this.form.activityTime && this.form.activityTime.length > 0) {
           this.form.activityTime.splice(0, this.form.activityTime.length)
