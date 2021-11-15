@@ -54,5 +54,19 @@ export const whiteList = [
     url: '/transfer/assignment',
     method: 'put',
     isReg: true
+  },
+  {
+    id: 9,
+    name: '活动管理-通过',
+    url: '/clues/activity/pass',
+    method: 'put',
+    isReg: true
+  },
+  {
+    id: 10,
+    name: '活动管理-驳回',
+    url: '/clues/activity/reject',
+    method: 'put',
+    isReg: true
   }
 ]
