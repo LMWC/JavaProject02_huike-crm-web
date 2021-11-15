@@ -82,7 +82,7 @@ export function gainClue(data) {
 // 线索转商机
 export function turnBusiness(id) {
   return request({
-    url: `clues/clue/changeBusiness/${id}`,
+    url: `/clues/clue/changeBusiness/${id}`,
     method: 'put',
     data: {}
   })

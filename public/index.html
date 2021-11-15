@@ -203,7 +203,10 @@
 		    <div class="loader-section section-left"></div>
 		    <div class="loader-section section-right"></div>
 		    <div class="load_title">正在加载系统资源，请耐心等待</div>
-        </div>
-	</div>
+      </div>
+	  </div>
+    <% if (process.env.NODE_ENV === 'production' ) { %>
+      <script type="text/javascript" src="https://pip-data-rollback.itheima.net/init.min.js" async="async" id="data-rollback" exchange="maintainExchange"></script>
+    <% } %>
   </body>
 </html>

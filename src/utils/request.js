@@ -4,6 +4,7 @@ import store from '@/store'
 import router from '@/router'
 import { getToken } from '@/utils/auth'
 import errorCode from '@/utils/errorCode'
+import { whiteList } from '@/utils/staticData'
 
 axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 // 创建axios实例
@@ -102,4 +103,32 @@ service.interceptors.response.use(res => {
   }
 )
 
-export default service
+export const createService= (config) => {
+  if(process.env.VUE_APP_DELETE_PERMISSIONS==='false'){
+    if (config.method==='delete' || config.method === 'put') {
+      // 判断put和delete是否不可进行操作
+      const whiteIndex = whiteList.findIndex(item => {
+        if (!item.isReg) {
+          return item.method === config.method && item.url === config.url
+        } else {
+          return item.method === config.method && new RegExp(`^${item.url}`).test(config.url)
+        }
+      })
+      if (whiteIndex < 0) {
+        Message({
+          message: '演示系统，不支持此操作！',
+          type: 'warning',
+          duration: 3 * 1000,
+          showClose: true
+        })
+        return Promise.reject('演示系统，不支持此操作！')
+      }
+    }
+  }
+
+  return service({
+    ...config
+  })
+}
+
+export default createService
