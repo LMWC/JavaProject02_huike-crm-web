@@ -134,7 +134,7 @@
           <el-table-column
             label="价格(元)"
             min-width="100"
-            align="center"
+            align="left"
             prop="price"
           />
           <el-table-column
