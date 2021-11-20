@@ -126,9 +126,9 @@
           <el-table-column label="序号" align="center" type="index" width="75" />
           <el-table-column label="活动编号" align="center" prop="code" />
           <el-table-column label="渠道来源" align="center" prop="channel" :formatter="channelFormat" min-width="100" />
-          <el-table-column label="活动名称" align="center" prop="name" min-width="100" />
-          <el-table-column label="活动简介" align="center" prop="info" min-width="100" show-overflow-tooltip />
-          <el-table-column label="活动明细" align="center" min-width="150">
+          <el-table-column label="活动名称" prop="name" :show-overflow-tooltip="true" min-width="150" />
+          <el-table-column label="活动简介" prop="info" :show-overflow-tooltip="true" min-width="150" />
+          <el-table-column label="活动明细" min-width="150" :show-overflow-tooltip="true">
             <template slot-scope="scope">
               <span>{{ typeFormat(scope.row) }}/{{ scope.row.type==1?scope.row.discount+'折':scope.row.vouchers+'元' }}</span>
             </template>

@@ -45,7 +45,7 @@
           <!-- <el-table-column label="角色编号" align="center" /> -->
           <el-table-column label="用户名" prop="operName" align="center" />
           <el-table-column label="请求方式" prop="requestMethod" align="center" />
-          <el-table-column label="访问地址" prop="operUrl" align="center" />
+          <el-table-column label="访问地址" prop="operUrl" show-overflow-tooltip />
           <!-- <el-table-column label="姓名" align="center" /> -->
           <!-- <el-table-column label="组织结构" align="center" /> -->
           <el-table-column label="模块名称" prop="title" align="center" show-overflow-tooltip />
@@ -55,7 +55,7 @@
           <el-table-column label="操作时间" align="center" prop="operTime" />
           <!-- <el-table-column label="操作状态" prop="status" align="center" /> -->
           <!-- <el-table-column label="退出时间" align="center" /> -->
-          <el-table-column label="操作" align="center" prop="btn">
+          <el-table-column fixed="right" label="操作" align="center" class-name="small-padding fixed-width">
             <template slot-scope="scope">
               <el-button
                 size="mini"

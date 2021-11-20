@@ -252,7 +252,8 @@
       th{
         color: #666666;
         font-weight: 500;
-        background-color: #e5efec;
+        background-color: #eaf1ef !important;
+        padding: 1px 0 !important;
         &:first-child{
           .cell{
             // padding-left: 20px;
@@ -291,6 +292,9 @@
 .el-table--striped .el-table__body tr.el-table__row--striped td{
   background: #fafcfb;
 }
+.el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell{
+  background: #fafcfb;
+}
 
 .el-table__body tr.hover-row > td{
   background: #f3f9f7 !important;
@@ -307,6 +311,10 @@
 .cus-no-page{
   margin-bottom: 45px;
 }
+
+// .el-table .el-table__header-wrapper th, .el-table .el-table__fixed-header-wrapper th{
+//    background-color: #EAF1EF !important;
+// }
 
 
 /*自定义按钮*/

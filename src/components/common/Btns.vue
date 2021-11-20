@@ -71,7 +71,7 @@ export default {
       }
 
       .active {
-        color: #333333;
+        color: #05CC95;
         transition: all 0.2s ease-in;
         background: #ffffff;
         box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.06);

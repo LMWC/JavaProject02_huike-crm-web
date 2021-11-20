@@ -23,7 +23,7 @@
               <div v-html="rulesFormat(scope.row)" />
             </template>
           </el-table-column>
-          <el-table-column label="分配" show-overflow-tooltip align="center" prop="assignObject">
+          <el-table-column label="分配" show-overflow-tooltip prop="assignObject">
             <template slot-scope="scope">
               {{ assignTypeOptionsFormat(scope.row.assignType) }}-{{ String(scope.row.assignObjectNames) }}
             </template>

@@ -222,7 +222,7 @@
     border: none;
   }
   .el-table .el-table__header-wrapper th, .el-table .el-table__fixed-header-wrapper th {
-    background-color: #fff;
+    background-color: #fff !important;
   }
 
   .el-table th.is-leaf, .el-table td {

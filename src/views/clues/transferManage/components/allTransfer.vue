@@ -27,9 +27,9 @@
           <el-table-column label="商机数量" prop="businessNum" align="center" />
           <el-table-column label="创建时间" prop="createTime" sortable align="center" />
           <el-table-column label="手机号码" prop="phonenumber" align="center" />
-          <el-table-column label="操作" align="center">
+          <el-table-column fixed="right" label="操作" align="center" class-name="small-padding fixed-width">
             <template slot-scope="{ row }">
-              <el-button type="text" size="mini" @click="goDetail(row)">处 理</el-button>
+              <el-button type="text" size="mini" @click="goDetail(row)">处理</el-button>
             </template>
           </el-table-column>
         </el-table>

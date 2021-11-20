@@ -2,16 +2,16 @@
   <div v-if="tabsIndex === 1" class="read">
     <div v-loading="dataListLoading" :class="{'loading-box':dataListLoading}" class="read-table">
       <div v-show="dataList && dataList.length > 0">
-        <el-table class="cus-table-box" :data="dataList" stripe>
+        <el-table ref="table" class="cus-table-box" :data="dataList" stripe>
           <el-table-column label="序号" align="center" type="index" width="75" />
           <el-table-column label="发信人" prop="createBy" align="center" />
           <el-table-column label="内容" prop="noticeContent" align="center">
             <template slot-scope="{ row }">
-              <span v-html="row.noticeContent"></span>
+              <div v-html="row.noticeContent"></div>
             </template>
           </el-table-column>
           <el-table-column label="通知时间" prop="createTime" sortable align="center" />
-          <el-table-column label="操作" align="center">
+          <el-table-column fixed="right" label="操作" align="center" class-name="small-padding fixed-width">
             <template slot-scope="{ row }">
               <el-button type="text" size="mini" @click="seeRead(row)">查看</el-button>
             </template>

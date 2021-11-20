@@ -107,7 +107,7 @@
           <el-table-column label="客户姓名" align="center" prop="name" min-width="100" />
           <el-table-column label="手机号" align="center" prop="phone" min-width="100" />
           <el-table-column label="购买学科" align="center" prop="subject" :formatter="subjectFormat" />
-          <el-table-column label="购买课程" align="center" prop="courseId" :formatter="courseFormat" />
+          <el-table-column label="购买课程" prop="courseId" :formatter="courseFormat" :show-overflow-tooltip="true" />
           <!-- <el-table-column label="审核状态" min-width="100" align="center" prop="status" :formatter="statusFormat" /> -->
           <el-table-column
             label="创建时间"

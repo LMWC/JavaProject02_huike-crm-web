@@ -58,7 +58,6 @@ export default {
         grid: {
           left: '48px',
           right: '50px',
-          width: '94%',
           top: '40px',
           containLabel: true
         },
@@ -75,7 +74,7 @@ export default {
           },
           axisLine: {
             lineStyle: {
-              color: '#cdcdcd'
+              color: '#dfdff0'
             }
           },
           data: this.lineChartData.dateData
@@ -93,7 +92,8 @@ export default {
             // 网格线
             splitLine: {
               lineStyle: {
-                type: 'dashed'
+                type: 'dashed',
+                color: '#dfdff0'
               },
               show: true
             },
@@ -102,7 +102,7 @@ export default {
             },
             axisLine: {
               lineStyle: {
-                color: '#cdcdcd'
+                color: '#dfdff0'
               }
             }
           }

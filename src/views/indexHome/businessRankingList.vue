@@ -25,7 +25,7 @@
         </el-form> -->
       </div>
     </div>
-    <div class="list" style="height: 480px;">
+    <div class="list" style="height: 500px;">
       <el-scrollbar style="height:100%;width: 98%;">
         <el-table :data="chennlData" style="width: 96%;margin: 0 auto;" :default-sort="{ prop: 'saleNum', order: 'descending' }">
           <el-table-column prop="id" label="排名" align="center" width="80">
@@ -35,7 +35,7 @@
               </div>
             </template>
           </el-table-column>
-          <el-table-column prop="create_by" label="用户姓名" align="center" />
+          <el-table-column prop="create_by" label="用户姓名" align="left" show-overflow-tooltip />
           <el-table-column prop="deptName" label="部门" align="center" />
           <el-table-column prop="num" sortable label="商机转化数(个)" align="center" min-width="100" />
           <el-table-column prop="radio" sortable label="商机转化率(%)" align="center" min-width="100" />
@@ -86,5 +86,8 @@ export default {
     width: 100%;
     height: 100%;
     padding-left: 20px;
+  }
+  /deep/ .el-table th{
+    padding: 10px 0 !important;
   }
 </style>

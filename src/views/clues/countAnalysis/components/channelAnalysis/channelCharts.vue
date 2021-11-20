@@ -185,7 +185,7 @@ export default {
           icon: 'circle',
           itemWidth: 8,
           itemHeight: 8,
-          bottom: '40',
+          bottom: '15',
           // right: '0%',
           left: 'center',
           textStyle: {
@@ -223,7 +223,7 @@ export default {
               }
             },
             radius: [80, 120],
-            center: ['50%', '50%'],
+            center: ['50%', '48%'],
             // 半径模式
             // roseType: 'radius',
             stillShowZeroSum: false,

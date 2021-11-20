@@ -127,9 +127,9 @@
           />
           <el-table-column
             label="课程名称"
-            min-width="100"
-            align="center"
+            min-width="120"
             prop="name"
+            :show-overflow-tooltip="true"
           />
           <el-table-column
             label="价格(元)"
@@ -140,16 +140,15 @@
           <el-table-column
             label="适用人群"
             min-width="100"
-            align="center"
             prop="applicablePerson"
             :formatter="applicablePersonFormat"
+            :show-overflow-tooltip="true"
           />
           <el-table-column
             label="课程介绍"
-            min-width="120"
-            align="center"
+            min-width="150"
             prop="info"
-            show-overflow-tooltip
+            :show-overflow-tooltip="true"
           />
           <!-- <el-table-column
             label="创建时间"

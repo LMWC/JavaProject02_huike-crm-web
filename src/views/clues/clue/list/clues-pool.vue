@@ -71,14 +71,14 @@
         <el-table class="cus-table-box" :data="dataList" stripe @selection-change="handleSelectionChange" @sort-change="dataListSortChangeHandle">
           <el-table-column type="selection" width="62" align="center" />
           <el-table-column label="线索ID" align="center" prop="id" />
-          <el-table-column label="手机号" align="center" prop="phone" :formatter="phoneFormat" />
-          <el-table-column label="渠道来源" align="center" prop="channel" :formatter="channelOptionsFormat" />
-          <el-table-column label="活动名称" align="center">
+          <el-table-column label="手机号" align="center" prop="phone" :formatter="phoneFormat" min-width="100" />
+          <el-table-column label="渠道来源" align="center" prop="channel" :formatter="channelOptionsFormat" min-width="100" />
+          <el-table-column label="活动名称" :show-overflow-tooltip="true">
             <template slot-scope="scope">
               <span>{{ scope.row.activityName }}</span>
             </template>
           </el-table-column>
-          <el-table-column label="创建时间" align="center" min-width="140" prop="createTime" sortable>
+          <el-table-column label="创建时间" align="center" min-width="150" prop="createTime" sortable>
             <template slot-scope="scope">
               <span>{{ parseTime(scope.row.createTime, '{y}-{m}-{d} {h}:{i}:{s}') }}</span>
             </template>

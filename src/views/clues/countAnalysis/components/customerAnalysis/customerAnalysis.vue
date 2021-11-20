@@ -40,7 +40,7 @@
               <el-table-column label="客户ID" align="center" prop="id" />
               <el-table-column label="姓名" prop="name" align="center" />
               <el-table-column label="课程学科" prop="subject" align="center" :formatter="subjectFormat" />
-              <el-table-column label="课程名称" prop="courseId" align="center" :formatter="courseFormat" />
+              <el-table-column label="课程名称" prop="courseId" :formatter="courseFormat" :show-overflow-tooltip="true" />
               <el-table-column label="渠道来源" prop="channel" align="center" :formatter="channelFormat" />
               <el-table-column label="归属人" align="center" prop="createBy" />
               <el-table-column label="成交时间" prop="createTime" sortable align="center" />

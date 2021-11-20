@@ -19,6 +19,11 @@ label {
   font-weight: 700;
 }
 
+p{
+  padding: 0;
+  margin: 0;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -124,6 +129,10 @@ aside {
 //main-container全局样式
 .app-container {
   // padding: 20px;
+}
+
+.other-bg{
+  background-color: #f9f9f9;
 }
 
 .components-container {

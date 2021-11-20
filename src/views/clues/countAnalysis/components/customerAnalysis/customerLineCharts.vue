@@ -85,16 +85,17 @@ export default {
             // 网格线
             splitLine: {
               lineStyle: {
-                type: 'dashed'
+                type: 'dashed',
+                color: '#dfdff0'
               },
-              show: true
+              show: false
             },
             axisLabel: {
               color: '#666666'
             },
             axisLine: {
               lineStyle: {
-                color: '#cdcdcd'
+                color: '#dfdff0'
               }
             }
           },
@@ -111,7 +112,8 @@ export default {
             // 网格线
             splitLine: {
               lineStyle: {
-                type: 'dashed'
+                type: 'dashed',
+                color: '#dfdff0'
               },
               show: true
             },
@@ -120,7 +122,7 @@ export default {
             },
             axisLine: {
               lineStyle: {
-                color: '#cdcdcd'
+                color: '#dfdff0'
               }
             }
           }

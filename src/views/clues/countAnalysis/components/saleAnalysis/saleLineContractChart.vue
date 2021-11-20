@@ -59,7 +59,7 @@ export default {
           },
           axisLine: {
             lineStyle: {
-              color: '#cdcdcd'
+              color: '#dfdff0'
             }
           },
           data: this.lineContractData.dateData
@@ -77,7 +77,8 @@ export default {
             // 网格线
             splitLine: {
               lineStyle: {
-                type: 'dashed'
+                type: 'dashed',
+                color: '#dfdff0'
               },
               show: true
             },
@@ -86,7 +87,7 @@ export default {
             },
             axisLine: {
               lineStyle: {
-                color: '#cdcdcd'
+                color: '#dfdff0'
               }
             }
           }
