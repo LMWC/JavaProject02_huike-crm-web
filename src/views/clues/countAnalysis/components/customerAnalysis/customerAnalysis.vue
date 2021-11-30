@@ -39,10 +39,10 @@
               <!-- <el-table-column type="selection" width="62" align="center" /> -->
               <el-table-column label="客户ID" align="center" prop="id" />
               <el-table-column label="姓名" prop="name" align="center" />
-              <el-table-column label="课程学科" prop="subject" align="center" :formatter="subjectFormat" />
+              <el-table-column label="课程学科" prop="subject" align="left" show-overflow-tooltip :formatter="subjectFormat" />
               <el-table-column label="课程名称" prop="courseId" :formatter="courseFormat" :show-overflow-tooltip="true" />
               <el-table-column label="渠道来源" prop="channel" align="center" :formatter="channelFormat" />
-              <el-table-column label="归属人" align="center" prop="createBy" />
+              <el-table-column label="归属人" align="left" prop="createBy" show-overflow-tooltip />
               <el-table-column label="成交时间" prop="createTime" sortable align="center" />
               <!-- <el-table-column label="操作" align="center">
                 <template slot-scope="{ row }">

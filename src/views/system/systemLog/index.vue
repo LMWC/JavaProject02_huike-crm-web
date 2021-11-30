@@ -45,11 +45,11 @@
           <!-- <el-table-column label="角色编号" align="center" /> -->
           <el-table-column label="用户名" prop="operName" align="center" />
           <el-table-column label="请求方式" prop="requestMethod" align="center" />
-          <el-table-column label="访问地址" prop="operUrl" show-overflow-tooltip />
+          <el-table-column label="访问地址" prop="operUrl" show-overflow-tooltip min-width="100" />
           <!-- <el-table-column label="姓名" align="center" /> -->
           <!-- <el-table-column label="组织结构" align="center" /> -->
-          <el-table-column label="模块名称" prop="title" align="center" show-overflow-tooltip />
-          <el-table-column label="登录IP" prop="operIp" align="center" />
+          <el-table-column label="模块名称" prop="title" align="left" show-overflow-tooltip />
+          <el-table-column label="登录IP" prop="operIp" align="left" show-overflow-tooltip />
           <!-- <el-table-column label="登录时间" prop="operTime" align="center" width="160" /> -->
           <!-- <el-table-column label="功能" align="center" /> -->
           <el-table-column label="操作时间" align="center" prop="operTime" />

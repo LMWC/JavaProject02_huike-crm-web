@@ -37,10 +37,10 @@
               <el-table-column label="活动编号" align="left" prop="code" />
               <el-table-column label="活动名称" align="left" prop="name" show-overflow-tooltip />
               <el-table-column label="活动简介" align="left" prop="info" show-overflow-tooltip />
-              <el-table-column label="线索总数" align="center" prop="cluesNum" />
-              <el-table-column label="伪线索数" align="center" prop="falseCluesNum" />
-              <el-table-column label="转化商机数" align="center" prop="businessNum" />
-              <el-table-column label="转化客户数" align="center" prop="customersNum" />
+              <el-table-column label="线索总数" align="left" prop="cluesNum" />
+              <el-table-column label="伪线索数" align="left" prop="falseCluesNum" />
+              <el-table-column label="转化商机数" align="left" prop="businessNum" />
+              <el-table-column label="转化客户数" align="left" prop="customersNum" />
               <el-table-column label="成交金额" align="left" prop="amount" />
               <el-table-column label="活动成本" align="left" prop="cost" />
               <el-table-column label="创建时间" sortable align="center" prop="createTime" min-width="140" />

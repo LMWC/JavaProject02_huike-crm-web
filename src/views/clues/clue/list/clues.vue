@@ -97,7 +97,7 @@
           <el-table-column type="selection" width="62" align="center" />
           <el-table-column label="线索ID" align="center" prop="id" min-width="80" />
           <el-table-column label="手机号" align="center" prop="phone" min-width="100" />
-          <el-table-column label="渠道来源" align="center" prop="channel" min-width="100" :formatter="channelOptionsFormat" />
+          <el-table-column label="渠道来源" align="center" prop="channel" :formatter="channelOptionsFormat" />
           <!-- <el-table-column label="活动信息" align="center" show-overflow-tooltip min-width="120">
             <template slot-scope="scope">
               <span>[{{ scope.row.activityId }}]活动缺少字段</span>
@@ -108,7 +108,7 @@
               <span>{{ parseTime(scope.row.createTime, '{y}-{m}-{d} {h}:{i}:{s}') }}</span>
             </template>
           </el-table-column>
-          <el-table-column label="归属人" align="center" prop="owner" min-width="100" />
+          <el-table-column label="归属人" align="left" prop="owner" show-overflow-tooltip />
           <!-- <el-table-column
             label="线索状态"
             align="center"
@@ -120,7 +120,6 @@
             label="线索状态"
             align="center"
             prop="status"
-            min-width="100"
             :formatter="statusFormat"
             :filter-multiple="false"
             :filters="statusFiltersOptions"

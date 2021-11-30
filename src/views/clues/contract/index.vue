@@ -103,10 +103,10 @@
         <el-table stripe class="cus-table-box" :data="dataList" @sort-change="dataListSortChangeHandle">
           <!-- <el-table-column type="selection" width="62" align="center" /> -->
           <el-table-column label="序号" align="center" type="index" width="75" />
-          <el-table-column label="合同编号" align="center" prop="contractNo" />
-          <el-table-column label="客户姓名" align="center" prop="name" min-width="100" />
+          <el-table-column label="合同编号" align="left" prop="contractNo" show-overflow-tooltip />
+          <el-table-column label="客户姓名" align="left" prop="name" show-overflow-tooltip />
           <el-table-column label="手机号" align="center" prop="phone" min-width="100" />
-          <el-table-column label="购买学科" align="center" prop="subject" :formatter="subjectFormat" />
+          <el-table-column label="购买学科" align="left" prop="subject" show-overflow-tooltip :formatter="subjectFormat" />
           <el-table-column label="购买课程" prop="courseId" :formatter="courseFormat" :show-overflow-tooltip="true" />
           <!-- <el-table-column label="审核状态" min-width="100" align="center" prop="status" :formatter="statusFormat" /> -->
           <el-table-column

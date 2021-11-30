@@ -52,11 +52,11 @@
           <el-table class="cus-table-box" :data="dataList" stripe>
             <!-- <el-table-column type="selection" width="62" align="center" /> -->
             <el-table-column type="index" label="排行" align="center" width="100" />
-            <el-table-column v-if="value === '归属部门'" align="center" label="归属部门" prop="deptName" />
-            <el-table-column v-if="value === '归属渠道'" align="center" label="归属渠道" prop="channel" />
-            <el-table-column v-if="value === '归属人'" align="center" label="归属人" prop="create_by" />
-            <el-table-column label="合同数量" align="center" prop="num" />
-            <el-table-column label="成交金额" align="center" prop="total_amount" />
+            <el-table-column v-if="value === '归属部门'" align="left" label="归属部门" prop="deptName" min-width="300" />
+            <el-table-column v-if="value === '归属渠道'" align="left" label="归属渠道" prop="channel" min-width="300" />
+            <el-table-column v-if="value === '归属人'" align="left" label="归属人" prop="create_by" min-width="300" />
+            <el-table-column label="合同数量" align="left" prop="num" min-width="200" />
+            <el-table-column label="成交金额" align="left" prop="total_amount" min-width="200" />
           </el-table>
           <pagination
             v-show="total > 0"

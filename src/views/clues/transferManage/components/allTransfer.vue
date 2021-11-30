@@ -22,9 +22,9 @@
         <el-table class="cus-table-box" :data="dataList" stripe>
           <el-table-column label="序号" align="center" type="index" width="75" />
           <!-- <el-table-column label="编号" align="center" prop="userId" /> -->
-          <el-table-column label="用户名称" prop="userName" align="center" />
-          <el-table-column label="线索数量" prop="clueNum" align="center" />
-          <el-table-column label="商机数量" prop="businessNum" align="center" />
+          <el-table-column label="用户名称" prop="userName" align="left" show-overflow-tooltip />
+          <el-table-column label="线索数量" prop="clueNum" align="left" />
+          <el-table-column label="商机数量" prop="businessNum" align="left" />
           <el-table-column label="创建时间" prop="createTime" sortable align="center" />
           <el-table-column label="手机号码" prop="phonenumber" align="center" />
           <el-table-column fixed="right" label="操作" align="center" class-name="small-padding fixed-width">

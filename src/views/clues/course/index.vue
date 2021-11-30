@@ -121,8 +121,9 @@
           <el-table-column
             label="课程学科"
             min-width="100"
-            align="center"
+            align="left"
             prop="subject"
+            show-overflow-tooltip
             :formatter="subjectFormat"
           />
           <el-table-column
@@ -158,7 +159,7 @@
           /> -->
           <el-table-column
             label="创建时间"
-            min-width="120"
+            min-width="140"
             align="center"
             prop="createTime"
             sortable

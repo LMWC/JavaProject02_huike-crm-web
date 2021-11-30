@@ -79,7 +79,7 @@
           <el-table-column label="客户ID" align="center" prop="id" min-width="80" />
           <el-table-column label="姓名" align="center" prop="name" min-width="100" />
           <el-table-column label="手机号" align="center" prop="phone" :formatter="phoneFormat" min-width="100" />
-          <el-table-column label="意向学科" align="center" prop="subject" :formatter="subjectFormat" min-width="100" />
+          <el-table-column label="意向学科" align="left" show-overflow-tooltip prop="subject" :formatter="subjectFormat" />
           <el-table-column label="创建时间" align="center" min-width="140" prop="createTime" sortable>
             <template slot-scope="scope">
               <span>{{ parseTime(scope.row.createTime, '{y}-{m}-{d} {h}:{i}:{s}') }}</span>

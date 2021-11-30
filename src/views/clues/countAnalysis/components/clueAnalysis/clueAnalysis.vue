@@ -45,8 +45,8 @@
             <el-table-column label="线索编号" align="center" prop="id" />
             <el-table-column label="手机号" align="center" prop="phone" min-width="100" />
             <!-- <el-table-column label="归属部门" align="center" prop="deptId" /> -->
-            <el-table-column label="归属部门" align="center" prop="deptName" />
-            <el-table-column label="归属人" align="center" prop="owner" />
+            <el-table-column label="归属部门" align="left" prop="deptName" show-overflow-tooltip />
+            <el-table-column label="归属人" align="left" prop="owner" show-overflow-tooltip />
             <el-table-column label="渠道来源" align="center" prop="channel" :formatter="channelOptionsFormat" />
             <el-table-column label="活动详情" align="center" prop="" show-overflow-tooltip>
               <template slot-scope="{ row }">

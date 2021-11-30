@@ -37,8 +37,8 @@
           </el-table-column>
           <el-table-column prop="create_by" label="用户姓名" align="left" show-overflow-tooltip />
           <el-table-column prop="deptName" label="部门" align="left" show-overflow-tooltip />
-          <el-table-column prop="num" sortable label="商机转化数(个)" align="center" min-width="100" />
-          <el-table-column prop="radio" sortable label="商机转化率(%)" align="center" min-width="100" />
+          <el-table-column prop="num" sortable label="商机转化数(个)" align="center" min-width="120" />
+          <el-table-column prop="radio" sortable label="商机转化率(%)" align="center" min-width="120" />
         </el-table>
       </el-scrollbar>
     </div>
