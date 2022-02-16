@@ -148,7 +148,7 @@
               <span>{{ parseTime(scope.row.endTime, '{y}-{m}-{d} {h}:{i}') }}</span>
             </template>
           </el-table-column>
-          <el-table-column
+          <!-- <el-table-column
             v-if="activeName=='tabs1'"
             key="status"
             label="状态"
@@ -161,7 +161,7 @@
             :filter-method="filterStatus"
             column-key="status"
             filter-placement="bottom-end"
-          />
+          /> -->
           <!-- <el-table-column
             v-if="activeName!='tabs1'"
             key="status1"
