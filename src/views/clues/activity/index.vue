@@ -162,7 +162,7 @@
             column-key="status"
             filter-placement="bottom-end"
           />
-          <el-table-column
+          <!-- <el-table-column
             v-if="activeName!='tabs1'"
             key="status1"
             label="状态"
@@ -170,7 +170,7 @@
             align="center"
             prop="status"
             :formatter="statusFormat"
-          />
+          /> -->
           <el-table-column v-if="activeName!=2 && activeName!=4" fixed="right" label="操作" align="center" class-name="small-padding fixed-width" min-width="120">
             <template slot-scope="scope">
               <el-button
@@ -188,7 +188,7 @@
                 type="text"
                 @click="handleDelete(scope.row.id)"
               >删除</el-button>
-              <el-button
+              <!-- <el-button
                 v-if="scope.row.status==1"
                 v-hasPermi="['clues:activity:pass']"
                 size="mini"
@@ -202,7 +202,7 @@
                 size="mini"
                 type="text"
                 @click="rejectHandle(scope.row.id)"
-              >驳回</el-button>
+              >驳回</el-button> -->
             </template>
           </el-table-column>
         </el-table>
