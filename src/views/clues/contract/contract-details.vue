@@ -207,13 +207,13 @@ export default {
       }
       this.dataForm = {
         ...this.dataForm,
-        ...res.data.info
+        ...res.data
       }
-      this.allUsers = res.data.allUsers
-      this.flows = res.data.flows
-      // 加载流程信息
-      this.getFlowInfo()
-      this.showAudit()
+      // this.allUsers = res.data.allUsers
+      // this.flows = res.data.flows
+      // // 加载流程信息
+      // this.getFlowInfo()
+      // this.showAudit()
       if (this.dataForm.courseId !== null && this.dataForm.courseId !== '') {
         this.getCourseList()
       }
