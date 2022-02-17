@@ -171,17 +171,15 @@
             prop="status"
             :formatter="statusFormat"
           /> -->
-          <el-table-column v-if="activeName!=2 && activeName!=4" fixed="right" label="操作" align="center" class-name="small-padding fixed-width" min-width="120">
+          <el-table-column fixed="right" label="操作" align="center" class-name="small-padding fixed-width" min-width="120">
             <template slot-scope="scope">
               <el-button
-                v-if="scope.row.status==3"
                 v-hasPermi="['clues:activity:edit']"
                 size="mini"
                 type="text"
                 @click="addOrUpdateHandle(scope.row.id)"
               >修改</el-button>
               <el-button
-                v-if="scope.row.status==3"
                 v-hasPermi="['clues:activity:remove']"
                 class="del-text"
                 size="mini"
