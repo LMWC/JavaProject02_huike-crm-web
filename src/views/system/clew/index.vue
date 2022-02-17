@@ -1,10 +1,10 @@
 <template>
   <div class="tabs-list-box">
     <el-tabs v-model="activeName">
-      <el-tab-pane
+      <!-- <el-tab-pane
         label="线索分配"
         name="tabs1"
-      />
+      /> -->
       <el-tab-pane
         label="线索池管理"
         name="tabs2"
@@ -31,13 +31,13 @@ export default {
   filters: {},
   data () {
     return {
-      activeName: 'tabs1'
+      activeName: 'tabs2'
     }
   },
   computed: {},
   watch: {},
   created () {
-    this.activeName = 'tabs1'
+    this.activeName = 'tabs2'
   },
   mounted () {},
   methods: {
