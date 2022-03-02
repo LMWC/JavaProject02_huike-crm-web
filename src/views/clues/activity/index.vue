@@ -19,7 +19,7 @@
           />
         </el-select>
       </el-form-item>
-      <el-form-item label="活动状态" prop="status">
+      <!-- <el-form-item label="活动状态" prop="status">
         <el-select v-model="queryParams.status" placeholder="请选择活动状态" clearable>
           <el-option
             v-for="dict in statusOptions"
@@ -28,7 +28,7 @@
             :value="dict.dictValue"
           />
         </el-select>
-      </el-form-item>
+      </el-form-item> -->
       <el-form-item label="创建时间">
         <el-date-picker
           v-model="createTime"
@@ -326,7 +326,6 @@ export default {
         pageSize: this.mixinViewModuleOptions.getDataListIsPage ? this.pageSize : null,
         ...this.queryParams
       }).then((res) => {
-        console.log('-=-=-res=-=-=-=', res)
         this.dataListLoading = false
         if (res.code !== 200) {
           // this.dataList = []
@@ -339,7 +338,6 @@ export default {
           ...this.totalCount,
           ...res.params
         }
-        console.log('-=-=-res=-=-=-=', this.dataList)
       }).catch(() => {
         this.dataListLoading = false
       })
