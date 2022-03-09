@@ -305,11 +305,12 @@ export default {
       }
       this.leftChartData = []
       reportChanelStatistics({ ...params }).then(res => {
-        this.leftChartData = res
+        const respone = res.data
+        this.leftChartData = respone
         console.log('-=-=-this.leftChartData-==--', this.leftChartData)
-        if (res) {
-          this.pieLeftChartData = res.length > 0 ? [...res] : this.leftData
-          if (res.length > 0) {
+        if (respone) {
+          this.pieLeftChartData = respone.length > 0 ? [...respone] : this.leftData
+          if (respone.length > 0) {
             this.pieLeftChartData = this.pieLeftChartData.map((obj) => ({ ...obj, value: obj.num, name: obj.channel }))
           }
           this.$nextTick(() => {
@@ -344,11 +345,13 @@ export default {
       }
       this.rightChartData = []
       reportActivityStatistics(params).then(res => {
-        this.rightChartData = res
+        
+        const respone =res.data
+        this.rightChartData = respone
         console.log('-=-=-this.rightChartData-==--', this.rightChartData)
-        if (res) {
-          this.pieRightChartData = res.length > 0 ? [...res] : this.rightData
-          if (res.length > 0) {
+        if (respone) {
+          this.pieRightChartData = respone.length > 0 ? [...respone] : this.rightData
+          if (respone.length > 0) {
             this.pieRightChartData = this.pieRightChartData.map(obj => ({ ...obj, value: obj.num, name: obj.activity }))
           }
           this.test = this.pieRightChartData.length > 0 && this.pieRightChartData.map(num => (num.value)).reduce((prev, curr) => (prev + curr))

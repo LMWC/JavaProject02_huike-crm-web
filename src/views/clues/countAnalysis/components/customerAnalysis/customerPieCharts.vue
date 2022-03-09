@@ -229,11 +229,13 @@ export default {
       }
       this.dataListLoading = true
       reportSubjectStatistics(params).then(res => {
-        this.dataList = res
+        
+        const respone = res.data
+        this.dataList = respone
         this.dataListLoading = false
-        if (res && res.length > 0) {
-          this.pieChartData = res.length > 0 ? [...res] : this.demoData
-          if (res.length > 0) {
+        if (respone && respone.length > 0) {
+          this.pieChartData = respone.length > 0 ? [...respone] : this.demoData
+          if (respone.length > 0) {
             this.pieChartData = this.pieChartData.map(obj => ({ ...obj, value: obj.num, name: obj.subject }))
           }
           this.test = this.pieChartData.map(num => (num.value)).reduce((prev, curr) => (prev + curr))
