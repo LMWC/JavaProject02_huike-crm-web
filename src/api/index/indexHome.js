@@ -3,7 +3,24 @@ import request from '@/utils/request'
 
 export function indexBase (params) {
   return request({
-    url: '/index',
+    url: '/index/getBaseInfo',
+    method: 'get',
+    params: { ...params }
+  })
+}
+
+// 今日简报
+export function getTodayInfo () {
+  return request({
+    url: '/index/getTodayInfo',
+    method: 'get'
+  })
+}
+
+// 获取待办数据
+export function getTodoInfo (params) {
+  return request({
+    url: '/index/getTodoInfo',
     method: 'get',
     params: { ...params }
   })

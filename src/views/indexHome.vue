@@ -179,8 +179,8 @@ import searchTitle from './indexHome/searchTitle.vue'
 import clueFunnelChart from './indexHome/clueFunnelChart.vue'
 import saleRankingList from './indexHome/saleRankingList.vue'
 import businessRankingList from './indexHome/businessRankingList.vue'
-// 基础数据 商机转换龙虎榜 销售龙虎榜
-import { indexBase, getBusinessChangeStatistics, getSalesStatistic } from '@/api/index/indexHome.js'
+// 基础数据 今日简报 待办数据 商机转换龙虎榜 销售龙虎榜
+import { indexBase,getTodayInfo,getTodoInfo, getBusinessChangeStatistics, getSalesStatistic } from '@/api/index/indexHome.js'
 import dayjs from 'dayjs'
 import { treeselect } from '@/api/system/dept'
 
@@ -201,7 +201,7 @@ export default {
       searchData: {
         beginCreateTime: dayjs().subtract(30, 'days').format('YYYY-MM-DD'),
         endCreateTime: dayjs().format('YYYY-MM-DD'),
-        deptId: null
+        // deptId: null
       },
       funnelData: [],
       // 商机转换龙虎榜数据
@@ -223,6 +223,8 @@ export default {
       console.log('this.departmentOptions', this.departmentOptions)
       // 获取基础数据
       this.getBaseData('null')
+      this.getTodayInfo()
+      this.getTodoInfo('null')
       // 商机转换龙虎榜
       this.getBusinessChangeStatistics('null')
       // 销售龙虎榜
@@ -238,11 +240,33 @@ export default {
     getBaseData (data) {
       const params = {
         ...this.searchData,
-        deptId: data === 'null' ? this.departmentOptions[0]?.id : data.deptId
+        // deptId: data === 'null' ? this.departmentOptions[0]?.id : data.deptId
       }
       indexBase(params).then(res => {
+        
         if (res && res.code === 200) {
+          console.log(res)
           this.formData = res.data
+        }
+      })
+    },
+    // 获取今日简报接口
+    getTodayInfo () {
+      getTodayInfo().then(res => {
+        if (res && res.code === 200) {
+          this.formData = Object.assign(res.data,this.formData)
+        }
+      })
+    },
+    // 获取待办数据接口
+    getTodoInfo (data) {
+      const params = {
+        ...this.searchData,
+        // deptId: data === 'null' ? this.departmentOptions[0]?.id : data.deptId
+      }
+      getTodoInfo(params).then(res => {
+        if (res && res.code === 200) {
+          this.formData = Object.assign(res.data,this.formData)
         }
       })
     },
