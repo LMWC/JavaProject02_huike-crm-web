@@ -79,6 +79,7 @@
 
 <script>
 import { getToken } from '@/utils/auth'
+import {download} from '@/api/clues/clue'
 
 export default {
   data () {
