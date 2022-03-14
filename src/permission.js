@@ -54,7 +54,7 @@ router.beforeEach((to, from, next) => {
           })
         })
         .catch(err => {
-          store.dispatch('LogOut').then(() => {
+          store.dispatch('FedLogOut').then(() => {
             // Message.error(err)
             next({ path: '/login' })
           })

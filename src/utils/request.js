@@ -62,7 +62,7 @@ service.interceptors.response.use(res => {
       //     type: 'warning'
       //   }
       // ).then(() => {
-        store.dispatch('LogOut').then(() => {
+        store.dispatch('FedLogOut').then(() => {
           // location.href = '/';
           router.replace({path: '/login'})
         })
