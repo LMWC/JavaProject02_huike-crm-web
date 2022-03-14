@@ -302,6 +302,8 @@ export default {
       this.getBaseData(data)
       this.getBusinessChangeStatistics(data)
       this.getSalesStatistic(data)
+      this.getTodayInfo()
+      this.getTodoInfo(data)
       this.$refs.funnelChart.getFunnelChart(data)
       console.log(data)
     }
