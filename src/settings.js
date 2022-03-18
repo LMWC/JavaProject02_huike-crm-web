@@ -1,5 +1,5 @@
 module.exports = {
-  title: '汇客CRM管理系统',
+  title: '汇客CRM管理',
 
   /**
    * 侧边栏主题 深色主题theme-dark，浅色主题theme-light

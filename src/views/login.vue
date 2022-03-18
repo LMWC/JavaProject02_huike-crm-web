@@ -5,7 +5,7 @@
       <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form">
         <div class="login-form-title">
           <img class="logo" src="../assets/images/login-logo.png" alt="">
-          <span class="title-label">汇客CRM系统</span>
+          <span class="title-label">汇客CRM</span>
         </div>
         <el-form-item prop="username">
           <el-input v-model="loginForm.username" type="text" auto-complete="off" placeholder="账号" prefix-icon="iconfont iconcus-user" />

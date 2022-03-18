@@ -1,7 +1,7 @@
 {
   "name": "huike",
   "version": "1.0.0",
-  "description": "汇客CRM管理系统",
+  "description": "汇客CRM管理",
   "author": "汇客",
   "license": "MIT",
   "scripts": {

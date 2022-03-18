@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      title: '汇客CRM系统',
+      title: '汇客CRM',
       logo: logoImg,
       logoMini: logoMiniImg
     }
