@@ -97,7 +97,7 @@ export function addBusinessRecord(data) {
   })
 }
 
-// 踢回公海
+// 退回公海
 export function backBusiness(data) {
   return request({
     url: `/business/back/${data.id}/${data.backReason}`,

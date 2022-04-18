@@ -22,7 +22,7 @@ export const whiteList = [
   },
   {
     id: 4,
-    name: '商机管理-踢回公海',
+    name: '商机管理-退回公海',
     url: '/business/back',
     method: 'put',
     isReg: true

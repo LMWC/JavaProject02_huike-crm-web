@@ -1,6 +1,6 @@
 <template>
   <!-- 分配线索对话框 -->
-  <el-dialog title="踢回公海" :visible.sync="visible" width="618px" append-to-body :close-on-click-modal="false">
+  <el-dialog title="退回公海" :visible.sync="visible" width="618px" append-to-body :close-on-click-modal="false">
     <el-form ref="form" class="cus-search-box cus-dialog-form-box" :model="form" :rules="rules">
       <el-form-item class="wp-100" label="原因" prop="backReason">
         <el-select v-model="form.backReason" placeholder="请选择原因">

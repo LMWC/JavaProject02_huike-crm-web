@@ -211,7 +211,7 @@
                     v-hasPermi="['business:business:back']"
                     class="default-btn"
                     @click="addOrUpdateHandle()"
-                  >踢回公海</el-button>
+                  >退回公海</el-button>
                   <el-button
                     v-hasPermi="['contract:contract:change']"
                     class="default-btn"

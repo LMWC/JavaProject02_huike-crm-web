@@ -166,7 +166,7 @@ export default {
         case '3':
           return '回收'
         case '4':
-          return '伪线索/踢回公海'
+          return '伪线索/退回公海'
         case '5':
           return '删除'
         case '6':
@@ -192,7 +192,7 @@ export default {
         case '3':
           return '回收'
         case '4':
-          return '伪线索/踢回公海'
+          return '伪线索/退回公海'
         case '5':
           return '删除'
         case '6':
