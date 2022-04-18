@@ -125,13 +125,13 @@
           :disabled="multiple"
           @click="handleDelete"
         >删除</el-button>
-        <el-button
+        <!-- <el-button
           v-hasPermi="['system:role:export']"
           class="default-btn"
           plain
           size="mini"
           @click="handleExport"
-        >导出</el-button>
+        >导出</el-button> -->
       </div>
     </div>
 

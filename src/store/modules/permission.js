@@ -15,6 +15,7 @@ const permission = {
       state.routes = constantRoutes.concat(routes)
     },
     SET_SIDEBAR_ROUTERS: (state, routers) => {
+      console.log(routers,123)
       state.sidebarRouters = constantRoutes.concat(routers)
     },
   },

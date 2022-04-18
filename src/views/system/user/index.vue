@@ -111,7 +111,7 @@
                 :disabled="multiple"
                 @click="handleDelete"
               >删除</el-button>
-              <el-button
+              <!-- <el-button
                 v-hasPermi="['system:user:import']"
                 type="info"
                 plain
@@ -126,7 +126,7 @@
                 size="mini"
                 class="default-btn"
                 @click="handleExport"
-              >导出</el-button>
+              >导出</el-button> -->
             </div>
           </div>
           <el-table v-loading="loading" stripe :data="userList" @selection-change="handleSelectionChange">
@@ -292,7 +292,7 @@
             >{{ dict.dictLabel }}</el-radio>
           </el-radio-group>
         </el-form-item>
-        <el-form-item label="岗位">
+        <!-- <el-form-item label="岗位">
           <el-select v-model="form.postIds" multiple placeholder="请选择">
             <el-option
               v-for="item in postOptions"
@@ -302,7 +302,7 @@
               :disabled="item.status == 1"
             />
           </el-select>
-        </el-form-item>
+        </el-form-item> -->
         <el-form-item label="角色">
           <el-select v-model="form.roleIds" multiple placeholder="请选择">
             <el-option
