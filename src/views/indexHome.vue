@@ -223,17 +223,17 @@ export default {
     treeselect().then(response => {
       this.departmentOptions = response.data
       console.log('this.departmentOptions', this.departmentOptions)
-      // 获取基础数据
-      this.getBaseData('null')
-      this.getTodayInfo()
-      this.getTodoInfo('null')
-      // 商机转换龙虎榜
-      this.getBusinessChangeStatistics('null')
-      // 销售龙虎榜
-      this.getSalesStatistic('null')
-      // 漏斗图
-      // this.getFunnelData('null')
     })
+    // 获取基础数据
+    this.getBaseData('null')
+    this.getTodayInfo()
+    this.getTodoInfo('null')
+    // 商机转换龙虎榜
+    this.getBusinessChangeStatistics('null')
+    // 销售龙虎榜
+    this.getSalesStatistic('null')
+    // 漏斗图
+    // this.getFunnelData('null')
   },
   mounted () {
   },
