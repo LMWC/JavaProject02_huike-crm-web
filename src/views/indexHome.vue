@@ -55,7 +55,7 @@
           <div class="demo">
             <div class="content-left">
               <p>今日新增线索</p>
-              <h4>{{ formData.todayCluesNum }}</h4>
+              <h4>{{ todayData.todayCluesNum }}</h4>
             </div>
             <div class="content-right">
               <img src="@/assets/index_home/today_clue.png" alt="">
@@ -64,7 +64,7 @@
           <div class="demo">
             <div class="content-left">
               <p>今日新增商机</p>
-              <h4>{{ formData.todayBusinessNum }}</h4>
+              <h4>{{ todayData.todayBusinessNum }}</h4>
             </div>
             <div class="content-right">
               <img src="@/assets/index_home/today_opport.png" alt="">
@@ -73,7 +73,7 @@
           <div class="demo">
             <div class="content-left">
               <p>今日新增客户</p>
-              <h4>{{ formData.todayContractNum }}</h4>
+              <h4>{{ todayData.todayContractNum }}</h4>
             </div>
             <div class="content-right">
               <img src="@/assets/index_home/today_customer.png" alt="">
@@ -82,7 +82,7 @@
           <div class="demo">
             <div class="content-left">
               <p>今日销售额</p>
-              <h4>{{ formData.todaySalesAmount }}</h4>
+              <h4>{{ todayData.todaySalesAmount }}</h4>
             </div>
             <div class="content-right">
               <img src="@/assets/index_home/today_sale.png" alt="">
@@ -112,7 +112,7 @@
             <div class="demo" style="cursor: pointer;" @click="() => $router.push('/clue')">
               <div class="content-left">
                 <p>待跟进线索</p>
-                <h4>{{ formData.tofollowedCluesNum }}</h4>
+                <h4>{{ backlogData.tofollowedCluesNum }}</h4>
               </div>
               <div class="content-right">
                 <img src="@/assets/index_home/follow-up_clue.png" alt="">
@@ -124,7 +124,7 @@
             <div class="demo" style="cursor: pointer;" @click="() => $router.push('/business')">
               <div class="content-left">
                 <p>待跟进商机</p>
-                <h4>{{ formData.tofollowedBusinessNum }}</h4>
+                <h4>{{ backlogData.tofollowedBusinessNum }}</h4>
               </div>
               <div class="content-right">
                 <img src="@/assets/index_home/follow-up_opport.png" alt="">
@@ -133,7 +133,7 @@
             <div class="demo left-demo" style="cursor: pointer;" @click="() => $router.push('/clue')">
               <div class="content-left">
                 <p>待分配线索</p>
-                <h4>{{ formData.toallocatedCluesNum }}</h4>
+                <h4>{{ backlogData.toallocatedCluesNum }}</h4>
               </div>
               <div class="content-right">
                 <img src="@/assets/index_home/follow-up_assign_clue.png" alt="">
@@ -145,7 +145,7 @@
             <div class="demo" style="cursor: pointer;" @click="$router.push('/business')">
               <div class="content-left">
                 <p>待分配商机</p>
-                <h4>{{ formData.toallocatedBusinessNum }}</h4>
+                <h4>{{ backlogData.toallocatedBusinessNum }}</h4>
               </div>
               <div class="content-right">
                 <img src="@/assets/index_home/follow-up_money.png" alt="">
@@ -197,6 +197,8 @@ export default {
       // 部门
       departmentOptions: [],
       formData: {},
+      todayData: {},
+      backlogData: {},
       // 分发搜索值
       searchData: {
         beginCreateTime: dayjs().subtract(30, 'days').format('YYYY-MM-DD'),
@@ -254,7 +256,7 @@ export default {
     getTodayInfo () {
       getTodayInfo().then(res => {
         if (res && res.code === 200) {
-          this.formData = Object.assign(res.data,this.formData)
+          this.todayData = res.data
         }
       })
     },
@@ -266,7 +268,7 @@ export default {
       }
       getTodoInfo(params).then(res => {
         if (res && res.code === 200) {
-          this.formData = Object.assign(res.data,this.formData)
+          this.backlogData = res.data
         }
       })
     },
