@@ -271,6 +271,7 @@ export default {
       this.form.age = this.dataForm.age ? this.dataForm.age : undefined
       this.form.weixin = this.dataForm.weixin
       this.form.qq = this.dataForm.qq
+      this.form.subject = this.dataForm.subject
     },
     async getRecordList () {
       const res = await listClueRecord({ clueId: this.dataForm.id })
