@@ -1,3 +1,15 @@
+## 运行
+
+```bash
+# 获取huike-crm-web文件
+解压huike-crm-web.zip获取完整文件，仓库文件缺少node_modules
+
+# 打开控制台窗口
+在huike-crm-web文件夹窗口路径栏中输入cmd并回车打开huike-crm-web控制台窗口
+
+# 运行前端程序
+在控制台窗口中输入npm run dev并回车启动前端程序
+```
 ## 开发
 
 ```bash
