@@ -28,3 +28,13 @@ npm run build:stage
 # 构建生产环境
 npm run build:prod
 ```
+
+## 运行
+
+```bash
+# 打开控制台窗口
+在huike-crm-web文件夹窗口路径栏中输入cmd并回车打开huike-crm-web控制台窗口
+
+# 运行前端程序
+在控制台窗口中输入npm run dev并回车启动前端程序
+```
